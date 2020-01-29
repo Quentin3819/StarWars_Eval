@@ -1,0 +1,184 @@
+@font-face{
+    font-family: "Star Jedi Outline";
+    src: url("font/Starjout.ttf");
+}
+
+#bodyperso{
+    background-image: url(img/Star_Wars_Movies_Swords.jpg);
+    background-size: cover;
+
+}
+body {
+    color: white;
+    font-family: "Star Jedi Outline";
+}
+
+#titre {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+
+*{
+    margin: 0%;
+}
+
+
+body{
+    color: white;
+    font-weight: 100;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+
+}
+
+.divlist{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.divlist p {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.divlist p:hover{
+    color: #fced00
+}
+
+.voirfiche {
+    text-align: right;
+    margin: 0%;
+}
+
+#double{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#liste{
+    border: rgba(255, 255, 255, 0.774) solid;
+    background-color: rgba(0, 0, 0, 0.603);
+    width: 600px;
+    margin: 15px;
+    padding-top: 20px;
+}
+
+#double {
+    display: flex;
+}
+
+#infos{
+    border: white solid;
+    background-color: rgba(0, 0, 0, 0.603);
+    margin: 15px;
+    width: 600px;
+    text-align: center;
+}
+
+#infos h3 {
+    margin-top: 20px;
+}
+
+.invisible {
+    display: none;
+}
+
+.visible {
+}
+
+#menuhaut{
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.788);
+    justify-content: space-around;
+
+}
+
+#menuhaut a {
+    padding: 15px;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+#menuhaut a:hover{
+    color: #fced00
+}
+
+#menu p:hover{
+    color: #fced00
+}
+
+
+#bodyPlanete {
+    background-image: url(img/planete.jpg);
+    background-size: cover;
+}
+
+#bodyRecherche {
+    background-image: url(img/11832.jpg);
+    background-size: cover;
+
+}
+
+#menu3 {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+#sectionrecherche {
+    display: flex;
+    justify-content: space-around;
+}
+
+#sec {
+    border: rgba(255, 255, 255, 0.774) solid;   
+    background-color: rgba(0, 0, 0, 0.603);
+}
+
+#sec2, #divDetails{
+    border: rgba(255, 255, 255, 0.774) solid;   
+    background-color: rgba(0, 0, 0, 0.603);
+}
+
+#divDetails {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+#divDetails p:first-child{
+    margin-top: 20px;
+}
+
+#divDetails p{
+    text-align: center;
+}
+
+.opacityDivRecheche{
+    opacity: 0;
+}
+
+@media(max-width: 750px){
+    #liste{
+        display: flex;
+        flex-direction: column;
+    }
+}

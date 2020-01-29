@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="vendor/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>StarsWars</title>
+</head>
+<body id="bodyRecherche">
+    <div id="menuhaut">
+        <a href="Personnages.html">Personnages</a>
+        <a href="Planetes.html">Planetes</a>
+        <a href="Recherches.html">Recherche</a>
+    </div>
+    <p id="titre">Rechercher Des personnage et des Planetes</p>
+        <section id="sectionrecherche">
+        <div id="menu3">
+            <label for="prenom">Recherche de Prénoms</label>
+            <input id="rec" type="text" name="prenom" placeholder="Prénoms" onkeyup="rechercher()">
+            <section id="sec">
+            </section>
+        </div>
+        <div id="divDetails" class="opacityDivRecheche">
+
+        </div>
+
+        <div id="menu3">
+            <label for="planete">Recherche de Planetes</label>
+            <input id="rec2" type="text2" name="planete" placeholder="Planètes" onkeyup="rechercher2()">
+            <section id="sec2">
+            </section>
+            
+        </div>
+    </section>
+    
+<script src="vendor/jquey.js"></script>
+<script src="vendor/jquery.fancybox.min.js"></script>
+<script src="scriptRecherche.js"></script></body>
+
+</html>
