@@ -65,11 +65,11 @@ function detail2(x,y,z) {
     visibleDivRecherche.className = "visible"
     var parents = document.getElementById("divDetails");
     var nom = document.createElement("p");
-    nom.innerHTML += "<h2>NOM</h2><p>" + x + "</p><br>";
+    nom.innerHTML += "<h2>Nom</h2><p>" + x + "</p><br>";
     var temp = document.createElement("p");
-    temp.innerHTML += "<h2>CLIMAT</h2><p>" + y + "</p><br>";
+    temp.innerHTML += "<h2>Climat</h2><p>" + y + "</p><br>";
     var diams = document.createElement("p");
-    diams.innerHTML += "<h2>DIAMETRE</h2><p>" + z + "</p><br>";
+    diams.innerHTML += "<h2>Diametre</h2><p>" + z + "</p><br>";
     document.getElementById("divDetails").innerHTML = " "
     parents.appendChild(nom);
     parents.appendChild(temp);

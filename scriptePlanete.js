@@ -1,4 +1,4 @@
-//! Affichage des personnage
+//! Affichage des planete
 
 var bouton = document.getElementById("list")
 bouton.addEventListener("click", function() {list()} )
@@ -37,16 +37,16 @@ visibleDivPlanete.className = "visible"
             div.setAttribute("class", "divlist")
             var infof = document.createElement("p");
             infof.innerHTML= "voir les stats";
-            infof.addEventListener("click", function(){info(data.results[i].url)})
+            infof.addEventListener("click", function(){info(data.results[i].url, data.results[i].residents)})
             div2.appendChild(infof);
             }
     }
     )
 }
 
-//! Affichage des information  des personnages
+//! Affichage des information  des planete
 
-function info(detail){
+function info(detail, residents){
     visible.className= "vue"
     visible.className = "visible"
     fetch (detail)
@@ -130,15 +130,43 @@ function info(detail){
                 parent.appendChild(popu);
                 var popula = document.createElement("p");
                 popula.innerHTML= data.population;
-                
                 parent.appendChild(popula);
 
-                
+                var resid = document.createElement("h3");
+                resid.innerHTML= "Residents";
+                parent.appendChild(resid);
+
+
+                var resids = func_resident(residents)
+                parent.appendChild(resids);
             }
         )
 }
 
-//! Fonction suivant des personnages 
+function func_resident(Url_resident){
+    for (let i = 0; i < Url_resident.length; i++) {
+        var url = Url_resident[i];
+        fetch(url)
+    .then (
+        function(response){
+            return response.json()
+        }
+    )
+    .then (
+        function(data){
+            var parentP = document.getElementById("infos");
+            var resid_planete = document.createElement("p");
+            resid_planete.innerHTML= data.name;
+            parentP.appendChild(resid_planete);
+
+        }
+    )
+
+        
+    }
+}
+
+//! Fonction suivant des planete 
 
 var suiv = document.getElementById("suivant")
 suiv.addEventListener("click", function() {suivant()} )
@@ -171,14 +199,14 @@ function suivant(){
             div.setAttribute("class", "divlist")
             var infof = document.createElement("p");
             infof.innerHTML= "voir les stats";
-            infof.addEventListener("click", function(){info(data.results[i].url)})
+            infof.addEventListener("click", function(){info(data.results[i].url, data.results[i].residents)})
             div2.appendChild(infof);
             }
     }
     )
 }
 
-//! Fonction precedent des personnages
+//! Fonction precedent des planete
 
 
 var prece = document.getElementById("precedent")
@@ -212,8 +240,10 @@ function precedent(){
             div.setAttribute("class", "divlist")
             var infof = document.createElement("p");
             infof.innerHTML= "voir les stats";
-            infof.addEventListener("click", function(){info(data.results[i].url)})
+            infof.addEventListener("click", function(){info(data.results[i].url, data.results[i].residents)})
             div2.appendChild(infof);
+
+        
             }
     }
     )
